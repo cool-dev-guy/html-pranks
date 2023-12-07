@@ -86,10 +86,10 @@
   <main>
     <p>Expected outcome: Pressing START will start checking if HEADPHONES are plugged.If plugged it will play the desired sound.</p>
     <button type="button" name="button" onclick="this.innerText='RUNNING';GETTHETHING()">START</button>
-    
+    <section id="logger"></section>
   </main>
   <footer>
-    <input type="text" id="text" placeholder="Enter The desired audio url" onclick='this.value="https://v1.cdnpk.net/videvo_files/audio/premium/audio0249/watermarked/Comic%20Sonic%20Relief%20Audio%20Files_SexMoanOhYeahFemaleB_preview.mp3"'>
+    <input type="text" id="text" placeholder="Enter The desired audio url" onclick='this.value="https://samplelib.com/lib/preview/mp3/sample-3s.mp3"'>
   </footer>
 <script type="text/javascript">
   var notQuit = true
@@ -108,7 +108,7 @@
     });
     };
     if (currId !== prevId){
-      console.log(currId,prevId)
+      document.getElementById('logger').innerText=`${currId} changed ${prevId}`
       if (prevId===''){
         prevId = currId;
       }
